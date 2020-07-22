@@ -2,10 +2,23 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
+import numpy as np
 
-    pass
+def product_of_all_other_numbers(arr):
+    # return array of product of all numbers except the one at the index
+    # initilize
+    output = []
+    # loop through array
+    for idx, _ in enumerate(arr):
+        # create a local copy lst
+        lst = arr.copy()
+        # pop the value at the idx
+        lst.pop(idx)
+        # return the product
+        x = np.prod(lst)
+        output.append(x)
+    # return the product and update the value to the index
+    return output
 
 
 if __name__ == '__main__':

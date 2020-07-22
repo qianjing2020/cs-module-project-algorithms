@@ -4,8 +4,12 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    # count occurence of each item
+    counts = [arr.count(item) for item in arr] 
+    # find index that have count value of 1
+    idx = counts.index(1)
+    # return array at this index
+    return arr[idx]
 
 
 if __name__ == '__main__':
