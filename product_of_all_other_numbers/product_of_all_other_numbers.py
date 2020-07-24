@@ -13,6 +13,7 @@ def product_of_all_other_numbers(arr):
         # create a local copy lst
         lst = arr.copy()
         # pop the value at the idx
+        # is slicing fast then pop???
         lst.pop(idx)
         # return the product
         x = np.prod(lst)

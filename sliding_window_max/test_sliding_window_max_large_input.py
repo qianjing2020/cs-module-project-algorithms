@@ -12,7 +12,6 @@ class Test(unittest.TestCase):
                 arr.append(int(line.strip()))
 
         expected = []
-
         with open("data/output.txt") as file:
             for line in file:
                 expected.append(int(line.strip()))
